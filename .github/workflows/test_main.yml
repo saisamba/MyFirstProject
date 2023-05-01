@@ -18,8 +18,8 @@ jobs:
     steps:
       - name: simple evaluation on master
         if: github.ref == '/dev'
-        run: echo "dev runs"
+        run: echo "dev branch runs"
         
       - name: simple evaluation on master
         if: github.ref == '/master'
-        run: echo "main running"
+        run: echo "master branch running"
