@@ -21,5 +21,5 @@ jobs:
         run: echo "dev runs"
         
       - name: simple evaluation on master
-        if: github.ref == '/main'
+        if: github.ref == '/master'
         run: echo "main running"
