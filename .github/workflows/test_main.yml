@@ -16,10 +16,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: simple evaluation on master
-        if: github.ref == '/dev'
+      - name: simple evaluation on dev
+        if: github.ref == 'refs/heads/dev'
         run: echo "dev branch runs"
         
       - name: simple evaluation on master
-        if: github.ref == '/master'
+        if: github.ref == 'refs/heads/master'
         run: echo "master branch running"
