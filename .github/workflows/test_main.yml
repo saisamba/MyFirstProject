@@ -1,0 +1,25 @@
+name: test if conditions
+
+on:
+  workflow_dispatch:
+    inputs:
+      BRANCH:
+        description: 'Branch to use'
+        required: true
+        type: choice
+        options:
+        - main
+        - dev
+
+jobs:
+  test-conditions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: simple evaluation on master
+        if: github.ref == '/dev'
+        run: echo "dev runs"
+        
+      - name: simple evaluation on master
+        if: github.ref == '/main'
+        run: echo "main running"
